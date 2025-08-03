@@ -101,7 +101,7 @@ for message in st.session_state.messages:
             st.markdown(f"**Assistant:** {message['content']}")
     st.markdown("---")
 
-# Initialize session state for user input
+# Initialize session state for user 
 if 'user_input' not in st.session_state:
     st.session_state.user_input = ""
 
@@ -128,4 +128,5 @@ if st.button("Send", type="primary"):
 # Clear chat button
 if st.button("Clear Chat"):
     st.session_state.messages = []
+
     st.rerun()
