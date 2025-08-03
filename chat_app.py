@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-# Configure Streamlit page
+# Configure Streamlit page and initilazition  
 st.set_page_config(
     page_title="AI Chatbot",
     page_icon="🤖",
@@ -130,3 +130,4 @@ if st.button("Clear Chat"):
     st.session_state.messages = []
 
     st.rerun()
+
