@@ -1,0 +1,15 @@
+# ---------------------------------------
+# Python dependencies for AI Chatbot App
+# ---------------------------------------
+
+# Streamlit for UI
+streamlit==1.25.0
+
+# Requests for HTTP communication with Ollama API
+requests==2.31.0
+
+# ---------------------------------------
+# Ollama LLM server required (manual setup)
+# Install and run from: https://ollama.ai/
+# Start it before launching the app: ollama serve
+# ---------------------------------------
