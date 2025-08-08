@@ -2,6 +2,17 @@ import streamlit as st
 import requests
 import json
 
+DEFAULT_MODEL = 'llama2'
+DEFAULT_TEMP = 0.7
+
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+if "model" not in st.session_state:
+    st.session_state.model = DEFAULT_MODEL
+if "temperature" not in st.session_state:
+    st.session_state.temperature = DEFAULT_TEMP
+
 # Configure Streamlit page and initilazition  
 st.set_page_config(
     page_title="AI Chatbot",
@@ -59,16 +70,42 @@ if 'messages' not in st.session_state:
 
 # Sidebar configuration
 with st.sidebar:
-    st.title("⚙️ Configuration")
-    model = st.selectbox(
-        "Select Model",
+    import streamlit as st
+import requests
+
+# Step 1: Define defaults
+DEFAULT_MODEL = 'llama2'
+DEFAULT_TEMP = 0.7
+
+# Step 2: Initialize session state
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+if "model" not in st.session_state:
+    st.session_state.model = DEFAULT_MODEL
+if "temperature" not in st.session_state:
+    st.session_state.temperature = DEFAULT_TEMP
+
+# Step 3: Sidebar UI
+with st.sidebar:
+    st.title("Settings")
+    
+    st.session_state.model = st.selectbox(
+        "Choose model:",
         ["llama2", "mistral", "codellama"],
-        index=0
+        index=["llama2", "mistral", "codellama"].index(st.session_state.model)
     )
-    temperature = st.slider("Temperature", 0.0, 2.0, 0.7)
-    st.markdown("---")
-    st.markdown("### About")
-    st.markdown("This chatbot uses Ollama for local AI processing.")
+
+    st.session_state.temperature = st.slider(
+        "Temperature:",
+        0.0, 1.0, st.session_state.temperature, step=0.1
+    )
+
+    if st.button("🔁 Reset to Default"):
+        st.session_state.model = DEFAULT_MODEL
+        st.session_state.temperature = DEFAULT_TEMP
+        st.session_state.messages = []
+        st.experimental_rerun()
+
 
 # Main chat interface
 st.title("🤖 personal gym chat bot")
