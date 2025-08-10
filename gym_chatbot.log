@@ -1,0 +1,21 @@
+2025-08-10 18:09:10,808 - INFO - Initialized new chat session
+2025-08-10 18:09:12,895 - INFO - Ollama service is available
+2025-08-10 18:09:17,831 - INFO - Ollama service is available
+2025-08-10 18:09:18,407 - INFO - Ollama service is available
+2025-08-10 18:09:21,277 - INFO - Ollama service is available
+2025-08-10 18:09:21,278 - INFO - User Interaction: {"timestamp": "2025-08-10T18:09:21.278432", "action": "settings_reset", "details": {}}
+2025-08-10 18:09:21,279 - INFO - Settings reset to defaults
+2025-08-10 18:09:23,384 - INFO - Ollama service is available
+2025-08-10 18:09:26,323 - INFO - Ollama service is available
+2025-08-10 18:09:26,333 - INFO - User Interaction: {"timestamp": "2025-08-10T18:09:26.333174", "action": "empty_message_attempt", "details": {}}
+2025-08-10 18:09:40,861 - INFO - Ollama service is available
+2025-08-10 18:09:41,115 - INFO - Ollama service is available
+2025-08-10 18:09:41,125 - INFO - User Interaction: {"timestamp": "2025-08-10T18:09:41.125211", "action": "user_message", "details": {"message_length": 2}}
+2025-08-10 18:09:41,126 - INFO - User Interaction: {"timestamp": "2025-08-10T18:09:41.126080", "action": "ollama_request", "details": {"model": "llama2", "temperature": 0.7, "prompt_length": 2}}
+2025-08-10 18:09:43,192 - INFO - Ollama service is available
+2025-08-10 18:09:43,193 - INFO - Ollama request attempt 1/3
+2025-08-10 18:09:45,273 - INFO - Ollama response status: 404
+2025-08-10 18:09:45,273 - ERROR - Model 'llama2' not found
+2025-08-10 18:09:45,273 - ERROR - Ollama query failed: model_error - Model 'llama2' not found. Please check if the model is installed.
+2025-08-10 18:09:47,338 - INFO - Ollama service is available
+2025-08-10 18:09:48,666 - INFO - Ollama service is available
