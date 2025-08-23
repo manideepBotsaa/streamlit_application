@@ -1,4 +1,4 @@
-#streamlit_application
+**streamlit_application**
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
@@ -6,9 +6,9 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-#AI Chatbot Documentation
+**#AI Chatbot Documentation**
 
-##Overview
+**Overview**
 >This project is a Streamlit-based web application that implements a personal gym chatbot. It uses the Ollama API for local AI processing and provides a user-friendly interface for interacting with different language models.
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
@@ -46,7 +46,7 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="150%">
 
-##Features
+**Features**
 - Dark-themed user interface with custom CSS styling
 - Configurable model selection (llama2, mistral, codellama)
 - Adjustable temperature setting for AI responses
@@ -84,7 +84,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Installation
+**Installation**
 1. Install required Python packages:
 ```bash
 pip install streamlit requests
@@ -96,7 +96,7 @@ pip install streamlit requests
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Project Structure
+**Project Structure**
 
 ```bash
 project_directory/
@@ -107,7 +107,7 @@ project_directory/
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Usage
+**Usage**
 1. Run the Streamlit app:
 ```bash
 streamlit run app.py
@@ -127,14 +127,14 @@ streamlit run app.py
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Code Explanation
+**Code Explanation**
 
-###Imports
+***Imports***
 - `streamlit`: For creating the web interface
 - `requests`: For making API calls to Ollama
 - `json`: For handling JSON data
 
-###Page Configuration
+***Page Configuration***
 ```python
 st.set_page_config(
     page_title="AI Chatbot",
@@ -144,17 +144,17 @@ st.set_page_config(
 ```
 Sets up the Streamlit page with a title, icon, and wide layout.
 
-###CSS Styling
+***CSS Styling***
 Custom CSS is applied using `st.markdown` with `unsafe_allow_html=True` to create a dark theme and style various UI components.
 
-###Session State
+***Session State***
 ```python
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 ```
 Initializes chat history storage using Streamlit's session state.
 
-###Sidebar Configuration
+***Sidebar Configuration***
 ```python
 with st.sidebar:
     st.title("⚙️ Configuration")
@@ -163,19 +163,19 @@ with st.sidebar:
 ```
 Creates a sidebar for model selection and temperature adjustment.
 
-###Main Interface
+***Main Interface***
 - Displays the chat history in a container
 - Shows user and assistant messages with proper formatting
 - Uses markdown for styling
 
-###Ollama Integration
+***Ollama Integration***
 ```python
 def query_ollama(prompt, model_name, temp):
     response = requests.post("http://localhost:11434/api/generate", ...)
 ```
 Handles API calls to the local Ollama server for generating responses.
 
-###Chat Functionality
+***Chat Functionality***
 - Text input for user messages
 - Send button to trigger AI response
 - Clear chat button to reset conversation
@@ -183,14 +183,14 @@ Handles API calls to the local Ollama server for generating responses.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Error Handling
+**Error Handling**
 - Checks for valid user input
 - Handles API request errors
 - Displays warning messages when appropriate
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Limitations
+**Limitations**
 - Requires local Ollama server
 - Limited to supported models (llama2, mistral, codellama)
 - No persistent storage for chat history
@@ -198,7 +198,7 @@ Handles API calls to the local Ollama server for generating responses.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Future Improvements
+**Future Improvements**
 - Add persistent storage for chat history
 - Implement message streaming
 - Add support for more models
@@ -207,7 +207,7 @@ Handles API calls to the local Ollama server for generating responses.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##Troubleshooting
+**Troubleshooting**
 - Ensure Ollama server is running on port 11434
 - Verify model availability in Ollama
 - Check internet connection for package installation
