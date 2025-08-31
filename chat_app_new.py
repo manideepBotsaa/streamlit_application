@@ -111,7 +111,7 @@ with st.sidebar:
     if st.button("🗑️ Clear Chat History", type="secondary"):
         st.session_state.messages = []
         st.session_state.form_key += 1
-        st.experimental_rerun()  # ✅ fixed
+        st.rerun() # ✅ fixed
 
     # Chat statistics
     if st.session_state.messages:
@@ -210,7 +210,7 @@ with st.form(key=f"chat_form_{st.session_state.form_key}", clear_on_submit=True)
         
         # Increment form key to clear the form
         st.session_state.form_key += 1
-        st.experimental_rerun()  # ✅ fixed
+        st.rerun()  # ✅ fixed
     
     elif send_button and not user_input.strip():
         st.error("Please enter a message before sending.")
