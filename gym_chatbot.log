@@ -19,3 +19,10 @@
 2025-08-10 18:09:45,273 - ERROR - Ollama query failed: model_error - Model 'llama2' not found. Please check if the model is installed.
 2025-08-10 18:09:47,338 - INFO - Ollama service is available
 2025-08-10 18:09:48,666 - INFO - Ollama service is available
+2025-08-31 20:14:14,693 - INFO - Initialized new chat session
+2025-08-31 20:14:14,699 - ERROR - Cannot connect to Ollama service
+2025-08-31 20:17:18,187 - ERROR - Cannot connect to Ollama service
+2025-08-31 20:17:21,372 - ERROR - Cannot connect to Ollama service
+2025-08-31 20:17:21,384 - INFO - User Interaction: {"timestamp": "2025-08-31T20:17:21.384486", "action": "chat_cleared", "details": {"messages_cleared": 0}}
+2025-08-31 20:17:21,385 - INFO - Chat history cleared (0 messages)
+2025-08-31 20:17:21,415 - ERROR - Cannot connect to Ollama service
